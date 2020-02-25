@@ -230,7 +230,22 @@ public class CustomersController : ControllerBase
 ## MediatR
 https://github.com/jbogard/MediatR
 
-Przykład
+- Rejestracja MediatR
+https://github.com/sulmar/sulmar-mon-netcore3-group2/blob/89a41053fe33e52a63a684516d164d6abcd9759d/Resources.API/Startup.cs#L86
+
+- Utworzenie zdarzenia
+https://github.com/sulmar/sulmar-mon-netcore3-group2/blob/master/Resources.API/Events/AddVehicleEvent.cs
+
+- Utworzenie uchwytu
+https://github.com/sulmar/sulmar-mon-netcore3-group2/blob/master/Resources.API/Handlers/SaveVehicleHandler.cs
+
+- Przykład wysłania komunikatu
+https://github.com/sulmar/sulmar-mon-netcore3-group2/blob/89a41053fe33e52a63a684516d164d6abcd9759d/Resources.API/Controllers/VehiclesController.cs#L77
+
+- Utworzenie komendy do pobierania danych
+https://github.com/sulmar/sulmar-mon-netcore3-group2/blob/master/Resources.API/Handlers/QueryVehiclesHandler.cs
+
+- Przykład pobierania danych
 https://github.com/sulmar/sulmar-mon-netcore3-group2/blob/89a41053fe33e52a63a684516d164d6abcd9759d/Resources.API/Controllers/VehiclesController.cs#L77
 
 ## Hangfire
