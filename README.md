@@ -226,6 +226,17 @@ public class CustomersController : ControllerBase
 }
 ~~~
 
+
+## MessagePack
+
+- Rejestracja formattera z użyciem **MessagePack**
+https://github.com/sulmar/dotnet-core-message-pack/blob/56d0ff37f8c5e87a81e8ee06d134ddbff2e9fe7a/api/Startup.cs#L34
+
+- Utworzenie klienta z użyciem MessagePack
+https://github.com/sulmar/dotnet-core-message-pack/blob/56d0ff37f8c5e87a81e8ee06d134ddbff2e9fe7a/ConsoleClient/Program.cs#L26
+
+
+
 ## Własne reguły
 
 - Przykład implementacji interfejsu **IRouteConstraint**
