@@ -1,0 +1,5 @@
+﻿<Configuration>
+  <SmsService>
+    <Url>http://smsxml.orange.pl</Url>
+  </SmsService>
+</Configuration>
