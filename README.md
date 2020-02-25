@@ -226,6 +226,15 @@ public class CustomersController : ControllerBase
 }
 ~~~
 
+## Własne reguły
+
+- Przykład implementacji interfejsu **IRouteConstraint**
+https://github.com/sulmar/dotnet-core-routecontraint-polish-validators/blob/7dc05d986618ad7cff107167579c5c990ca92452/webapi/ConstraintExtensions.cs#L23
+
+- Rejestracja własnej reguły
+https://github.com/sulmar/dotnet-core-routecontraint-polish-validators/blob/7dc05d986618ad7cff107167579c5c990ca92452/webapi/ConstraintExtensions.cs#L57
+
+
 
 ## MediatR
 https://github.com/jbogard/MediatR
