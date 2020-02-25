@@ -13,6 +13,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using FluentValidation.AspNetCore;
+using Domain.Validators;
+using Microsoft.EntityFrameworkCore;
 
 namespace Api
 {
@@ -30,10 +33,20 @@ namespace Api
         {
             services.AddScoped<ICustomerRepository, FakeCustomerRepository>();
             services.AddScoped<Faker<Customer>, CustomerFaker>();
+            services.AddScoped<IMessageService, SmsMessageService>();
+            services.AddScoped<IMessageService, EmailMessageService>();
+
+            // dotnet add package FluentValidation.AspNetCore
 
             services.Configure<CustomerOptions>(Configuration.GetSection("CustomerOptions"));
 
-            services.AddControllers();
+            string connectionString = Configuration.GetConnectionString("MyConnection");
+
+            services.AddDbContext<CustomersContext>(options =>
+            options.UseSqlServer(connectionString));
+
+            services.AddControllers()
+                .AddFluentValidation(options => options.RegisterValidatorsFromAssemblyContaining<CustomerValidator>());
         }
 
        

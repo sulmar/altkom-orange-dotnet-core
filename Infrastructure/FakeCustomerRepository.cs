@@ -73,4 +73,50 @@ namespace Infrastructure
             throw new NotImplementedException();
         }
     }
+
+
+    public class DbCustomerRepository : ICustomerRepository
+    {
+        private readonly CustomersContext context;
+
+        public DbCustomerRepository(CustomersContext context)
+        {
+            this.context = context;
+        }
+
+        public void Add(Customer customer)
+        {
+            
+        }
+
+        public IEnumerable<Customer> Get()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Customer Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Customer Get(string login)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Customer> Get(CustomerSearchCriteria criteria)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Remove(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

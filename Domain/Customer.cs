@@ -9,5 +9,7 @@ namespace Domain
         public string LastName { get; set; }
         public string Login { get; set; }
         public bool IsRemoved { get; set; }
+
+        public string FullName => $"{FirstName} {LastName}";
     }
 }

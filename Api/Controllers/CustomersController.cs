@@ -38,6 +38,9 @@ namespace Api.Controllers
         {
             var customer = customerRepository.Get(id);
 
+            if (customer == null)
+                return NotFound();
+
             return Ok(customer);
         }
 
@@ -78,9 +81,20 @@ namespace Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(Customer customer)
+        public IActionResult Post(Customer customer, [FromServices] IEnumerable<IMessageService> messageServices)
         {
+            if (!this.ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
             customerRepository.Add(customer);
+
+            foreach (var messageService in messageServices)
+            {
+                messageService.Send($"Witaj {customer.FullName}");
+            }
+           
 
             return CreatedAtAction(nameof(GetById), new { Id = customer.Id }, customer);
         }
@@ -105,6 +119,23 @@ namespace Api.Controllers
             customerRepository.Remove(id);
 
             return NoContent();
+        }
+
+
+        //public async Task<IActionResult> Test()
+        //{
+        //    bool result1 = await IsValidAsync();
+        //    bool result2 = await IsValidAsync();
+        //    bool result3 = await IsValidAsync();
+
+
+
+        //    return Accepted(result);
+        //}
+
+        private Task<bool> IsValidAsync()
+        {
+            return Task.FromResult(true);
         }
 
     }
