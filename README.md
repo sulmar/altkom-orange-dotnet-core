@@ -227,6 +227,12 @@ public class CustomersController : ControllerBase
 ~~~
 
 
+## Signal-R
+
+- Przykład klienta signal-R javascript
+https://github.com/sulmar/dotnet-core-signalr-cpu/blob/master/HomeSignal/wwwroot/js/raport.js
+
+
 ## MessagePack
 
 - Rejestracja formattera z użyciem **MessagePack**
