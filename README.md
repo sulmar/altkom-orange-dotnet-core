@@ -226,6 +226,20 @@ public class CustomersController : ControllerBase
 }
 ~~~
 
+
+## MediatR
+https://github.com/jbogard/MediatR
+
+Przykład
+https://github.com/sulmar/sulmar-mon-netcore3-group2/blob/89a41053fe33e52a63a684516d164d6abcd9759d/Resources.API/Controllers/VehiclesController.cs#L77
+
+## Hangfire
+https://www.hangfire.io/
+
+Przykład
+https://github.com/sulmar/sulmar-mon-netcore3-group2/blob/89a41053fe33e52a63a684516d164d6abcd9759d/Resources.API/Controllers/VehiclesController.cs#L90
+
+
 ## Literatura
 - Hands-On RESTful Web Services with ASP.NET Core 3, Design production-ready, testable, and flexible RESTful APIs for web applications and microservices
 - ASP.NET Core, Angular i Bootstrap. Kompletny przybornik front-end developera
